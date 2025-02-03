@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Karen Olaya, portfolio, web developer, creative technologies, projects, community, wellness, accessibility"
+    />
+    <title>Clouds</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      body {
+        background: url("purpleclouds.jpeg") no-repeat center center fixed;
+        background-size: cover;
+        overflow: hidden;
+        margin: 0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar .logo a {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #4d5357;
+        text-decoration: none;
+      }
+
+      .navbar .logo a:hover {
+        color: #c7bbcf;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+
+      .hamburger {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+      }
+
+      .nav-links li a:hover {
+        background-color: gainsboro;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #000;
+      }
+
+      .resume-download a {
+        color: #007bff;
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .resume-download a:hover {
+        text-decoration: underline;
+      }
+      .top-line {
+        width: 100%;
+        height: 1px;
+        background-color: #e4e2e7;
+      }
+
+      .second-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem 5%;
+        color: #4d5357;
+      }
+
+      .content-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 4rem;
+      }
+
+      .text-content {
+        flex: 1;
+        max-width: 650px;
+        text-align: left;
+      }
+
+      .main-heading {
+        font-size: 2.7rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #4d5357;
+        padding-right: 90px;
+        position: relative;
+        line-height: 3.3rem;
+      }
+
+      .sub-heading {
+        font-size: 1.31rem;
+        font-weight: 400;
+        color: #4d5357;
+        text-align: left;
+        position: relative;
+        line-height: 2rem;
+      }
+
+      .clouds-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .cloud {
+        position: absolute;
+        width: 30vw;
+        height: 25vw;
+        background-size: contain;
+        background-repeat: no-repeat;
+        animation: move linear infinite;
+        opacity: 0.8;
+        z-index: 1;
+      }
+
+      .cloud1 {
+        background-image: url("cloud1.png");
+        top: 20px;
+        animation-duration: 40s;
+        animation-delay: -5s;
+        transform: scale(1.5);
+      }
+
+      .cloud2 {
+        background-image: url("cloud2.png");
+        top: 70px;
+        animation-duration: 18s;
+        animation-delay: -3s;
+        transform: scale(1.7);
+      }
+
+      .cloud3 {
+        background-image: url("cloud3.png");
+        top: 120px;
+        animation-duration: 30s;
+        animation-delay: -7s;
+        transform: scale(1.6);
+      }
+
+      .cloud4 {
+        background-image: url("cloud4.png");
+        top: 160px;
+        animation-duration: 40s;
+        animation-delay: -2s;
+        transform: scale(1.5);
+      }
+
+      .cloud5 {
+        background-image: url("cloud5.png");
+        top: 250px;
+        animation-duration: 17s;
+        animation-delay: -4s;
+        transform: scale(1.8);
+      }
+
+      .cloud6 {
+        background-image: url("cloud6.png");
+        top: 350px;
+        animation-duration: 40s;
+        animation-delay: -6s;
+        transform: scale(1.6);
+      }
+
+      .cloud7 {
+        background-image: url("cloud7.png");
+        top: 500px;
+        animation-duration: 15s;
+        animation-delay: -8s;
+        transform: scale(1.75);
+      }
+
+      .cloud8 {
+        background-image: url("cloud8.png");
+        top: 600px;
+        animation-duration: 30s;
+        animation-delay: -1s;
+        transform: scale(1.65);
+      }
+
+      .text-overlay {
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        text-align: center;
+        font-family: "Inter", sans-serif;
+        z-index: 10;
+        color: #4d5357;
+      }
+
+      .text-overlay h1 {
+        font-size: 8rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+      }
+
+      .text-overlay h2 {
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 0.15em solid #333;
+        width: 0;
+        animation: typing 3s steps(40) 1s forwards,
+          blink 0.99s step-end infinite alternate;
+      }
+
+      @keyframes typing {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      .text-overlay h2 span {
+        display: inline-block;
+      }
+
+      .text-overlay p {
+        font-size: 1.4rem;
+        font-weight: 300;
+        font-style: italic;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+      }
+
+      @keyframes move {
+        from {
+          transform: translateX(110vw);
+        }
+        to {
+          transform: translateX(-600px);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        h1 {
+          font-size: 8vw; /
+        }
+
+        .text-overlay h2 {
+          font-size: 6vw;
+        }
+
+        .description {
+          font-size: 5vw;
+        }
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 10vw;
+        }
+
+        .text-overlay h2 {
+          font-size: 7vw;
+        }
+
+        .description {
+          font-size: 6vw;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 12vw;
+        }
+
+        .text-overlay h2 {
+          font-size: 8vw;
+        }
+
+        .description {
+          font-size: 7vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#" class="interactive">Karen Olaya</a>
+      </div>
+      <button
+        class="hamburger"
+        id="hamburger-btn"
+        aria-label="Toggle Navigation Menu"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#work-section">Work</a></li>
+        <li><a href="#transition-section">About Me</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/karenolayamur23/">Connect</a>
+        </li>
+      </ul>
+      <div class="resume-download">
+        <a href="resume.pdf" download aria-label="Download Resume">
+          Download Resume <i class="fas fa-arrow-down" aria-hidden="true"></i>
+        </a>
+      </div>
+    </nav>
+
+    <div class="clouds-container">
+      <div class="cloud cloud1"></div>
+      <div class="cloud cloud2"></div>
+      <div class="cloud cloud3"></div>
+      <div class="cloud cloud4"></div>
+      <div class="cloud cloud5"></div>
+      <div class="cloud cloud6"></div>
+      <div class="cloud cloud7"></div>
+      <div class="cloud cloud8"></div>
+    </div>
+
+    <div class="text-overlay">
+      <h1>Karen Olaya</h1>
+      <h2 id="dynamic-text">Hi, I'm a digital marketer.</h2>
+      <script src="script.js"></script>
+      <p>
+        My main focus is balancing aesthetics with functionality to make
+        technology feel approachable, seamless, and intuitive.
+      </p>
+    </div>
+
+    <script>
+      document
+        .getElementById("hamburger-btn")
+        .addEventListener("click", function () {
+          const navMenu = document.getElementById("nav-menu");
+          navMenu.classList.toggle("active");
+        });
+
+      const phrases = [
+        "Hi, I'm a web developer.",
+        "Hi, I'm a content creator.",
+        "Hi, I'm a graphic designer.",
+        "Hi, I'm a researcher.",
+      ];
+
+      let currentPhrase = 0;
+      const textElement = document.querySelector(".text-overlay h2");
+
+      function changeText() {
+        textElement.textContent = "";
+
+        textElement.textContent = phrases[currentPhrase];
+
+        textElement.style.width = "0";
+
+        setTimeout(() => {
+          textElement.style.width = textElement.scrollWidth + "px";
+        }, 50);
+
+        currentPhrase = (currentPhrase + 1) % phrases.length;
+      }
+
+      setInterval(changeText, 7000);
+
+      setInterval(changeText, 4000);
+    </script>
+  </body>
+</html>
